@@ -1,0 +1,11 @@
+* {
+    border: border-box;
+}
+.cat {
+    display: block;
+    background-color: red;
+}
+.link {
+    display: block;
+    background-color: red;
+}

@@ -1,0 +1,389 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Начало меню */
+.header {
+    max-width: 1110px;
+    height: 92px;
+    margin: 0 auto;
+    /* outline: 1px solid red; */
+    position: relative;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+
+.menu>li {
+    position: absolute;    
+    top: 50%;
+    transform: translateY(-50%);
+    list-style: none;
+    text-decoration: none;
+}
+
+.menu_item {
+    right: 0;    
+}
+
+li>a {
+    text-decoration: none;
+    font-size: 18px;
+    font-family: myriad-pro, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.menu_position1 {
+    right: 446px;
+}
+
+.menu_position2 {
+    right: 340px;
+}
+
+.menu_position3 {
+    right: 270px;
+}
+
+.menu_position4 {
+    right: 200px;
+}
+
+.menu_position5 {
+    right: 130px;
+}
+
+.menu_position6 {
+    right: 0;
+}
+
+.logo {
+    font-size: 30px;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.logo::first-letter {
+    color: #1abc9c;
+    font-family: Myriad-pro, sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+}
+
+
+.list_item:hover {
+    color: #1abc9c;
+}
+
+.list_item:focus {
+    color: rgb(241, 226, 11);
+}
+
+/* Конец меню */
+
+.slider{
+    width: 1600px;
+    height: 600px;
+    margin: 0 auto;
+    background-image: url(../img/slider.png);    
+}
+
+
+.inside_box {
+    width: 1110px;
+    height: 600px;
+    margin: 0 auto;
+    /* outline: 1px solid blue; */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.slider_text {
+    height: 115px;
+    width: 730px;
+    position: absolute;
+    top: 43%;
+    left: 50%;    
+    transform: translate(-50%,-50%);    
+}
+
+.first_head {
+color: white;
+font-family: Roboto Black, sans-serif;
+    font-weight: 900;
+    font-size: 46px;
+}
+
+.first_text {
+    color: white;
+font-family: Roboto White, sans-serif;    
+    font-size: 21px;
+    padding-top:8px;
+}
+
+.before, .after {
+    height: 104px;
+    width: 104px;
+    background: #78c5b2;
+    opacity: 0.85;
+    position: absolute;
+    top: 37%;
+    text-align: center;
+    color: #ffff; 
+    padding-top: 8px;   
+    font-size:  80px;
+}
+
+.before {
+    left: 0;
+}
+
+.after {
+    right: 0;
+}
+
+
+.before:hover, .after:hover {
+    background: yellow;
+    color: blue;
+}
+
+
+.slider:hover {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.3), 
+        rgba(0, 0, 0, 0.3)
+        ), url(../img/slider.png);
+    
+}
+
+/* Конец слайдера */
+
+.new_collection {
+    width: 1600px;
+    height: 678 px;
+    background: #e9f0fd;
+    margin: 0 auto;
+}
+
+
+
+
+.first_title {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 110px;
+    padding-bottom: 80px;
+    display: inline-block;
+    text-align: center;
+    /* outline: 1px solid black; */
+}
+
+.first_title_name {
+    font-size: 38px;
+    font-family: Roboto Black, sans-serif;
+    font-weight: 900;
+    color: #515151;
+}
+
+.first_title_name::after {
+    content: "";
+    width: 164px;
+    height: 7px;
+    background-color: #1abc9c;
+    display: block;
+    margin: 0 auto;
+    margin-top: 16px;
+}
+
+/* конец заголовка */
+
+.collection {
+    width: 1600px;
+    height: 325px;
+    background: #e9f0fd;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.collection_block {
+    width: 1110px;
+    height: 325px;    
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);    
+}
+
+.product_card {
+    position: relative;
+    /* outline: 1px solid red; */
+    width: 255px; 
+    height: 322px;    
+}
+
+.product_name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #323232;
+    color: #ffffff;
+    width: 80%;  
+    height: 40px;
+    padding: 10px 0 14px 14px;  
+    font-weight: 700;
+    font-family: Roboto Black, sans-serif;
+}
+
+.product_price {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #8c8c8c;
+    color: #ffffff;
+    width: 20%;      
+    height: 40px;
+    font-weight: 900; 
+    font-family: Roboto Black, sans-serif;   
+    padding-top: 7px;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    width: 235px;
+    height: 262px;
+    background-color: rgb(0, 0, 0);
+    opacity: 0; 
+    top: 11px;
+    left: 10px;
+}
+
+.product_card:hover .overlay {
+    opacity: 0.549;
+}
+
+.product_card:hover .product_name {
+    background-color: #1abc9c;
+}
+
+.product_card:hover .product_price {
+    background-color: #7fd9c7;
+}
+
+.inside_menu {
+    position: absolute;
+    top: 79px;
+    left: 35px;
+    width: 166px;
+    height: 107px;    
+    
+}
+
+
+.product_card:hover .inside_menu{
+    background: black;
+}
+
+.menu_item1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    border: 1px solid white;
+    color: black;
+    opacity: 1;
+    text-align: center;
+font-size: 45px;
+color: white;
+}
+
+.menu_item2 {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 48px;
+    height: 48px;
+    border: 1px solid white;
+    text-align: center;
+font-size: 45px;
+color: white;
+}
+
+.menu_item3 {
+    position: absolute;
+    right: 0;
+    top: 0;    
+    width: 48px;
+    height: 48px;
+    border: 1px solid white;
+    text-align: center;
+font-size: 45px;
+color: white;
+}
+
+.menu_item4 {
+    position: absolute;
+    left: 0;
+    bottom: 0;    
+    width: 100%;
+    height: 48px;
+    border: 1px solid white;
+    background-image: url(../img/black-square.jpg);
+    opacity: 1;
+    font-size: 18px;
+    padding-left: 1px;
+    padding-top: 15px;
+    color: white;    
+}
+
+.menu_item1:hover, .menu_item2:hover, .menu_item3:hover, .menu_item4:hover {
+    background: #1abc9c;
+    border: 1px solid #1abc9c;
+}
+
+.card {
+    position: absolute;    
+    top: -50%;
+    transform: translateY(50.5%)
+}
+
+.card2 {
+    left: 285px;
+}
+
+.card3 {
+    right: 285px;
+}
+
+.card4 {
+    right: 0;
+}
+
+.footer {
+    width: 1600px;
+    height: 155px;
+    background: linear-gradient(#e9f0fd 50%,black 50%);
+    position: relative;
+    transform: translateX(-15.33%)
+}
+
+.rights {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-style: OpenSans;
+    color: white;
+}
+
+.colored {
+    color: #1abc9c;
+}

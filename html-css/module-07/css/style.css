@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+.pagewrapper1 {
+    width: 1400px;
+    margin: 0 auto;
+    background: white;
+}
+
+.pagewrapper2 {
+    width: 940px;
+    margin: 0 auto;
+}
+
+/* Хеадер */
+.header {
+    padding-top: 44px;
+    width: 940px;
+    margin: 0 auto;
+    margin-bottom: 130px;
+}
+
+.menu {
+    max-width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0;    
+}
+
+.menu-item {
+    margin: 0;    
+}
+
+.link-item:hover {
+    color: #fed136;    
+}
+
+.logo {
+    flex-basis: 44%;
+    margin: 0;
+    font-family: "Wisdom Script Regular", sans-serif;
+    font-size: 2rem;    
+    color: #fed136;
+    padding-left: 10px;
+}
+
+.link-item {
+    text-decoration: none;
+    text-transform: uppercase;    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #222222;
+}
+
+
+/* Секция с тайтлом */
+
+main {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.text-title {
+    margin-bottom: 65px;
+}
+
+.title {
+    display: flex;
+}
+
+.title-name {
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #444444;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.title-name::after {
+    content: "Proin iaculis purus consequant sem cure.";
+    display: block;
+    text-align: center;    
+    font-family: "Droid Serif", italic;
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #777777;
+    text-transform: none;
+}
+
+/* сервисы */
+
+.services {
+    max-width: 100%;
+    height: 200px;
+    display: flex;
+    justify-items: space-between;
+    margin-bottom: 120px;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;  
+    justify-content: space-between;  
+}
+
+.img-wrapper {
+    border: 3px solid #fed136;    
+    border-radius: 50%;
+    padding: 10px;
+    width: 67px;
+    height: 67px;
+    text-align: center;
+}
+
+.serv-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #444444;
+    text-align: center;
+}
+
+.serv-descr {
+    font-family: 'Roboto Slab', serif;    
+    font-weight: 400;
+    font-size: 0.8rem;
+    text-align: center;
+    line-height: 20px;
+}
+
+/* второй заголовок */
+
+footer {
+    width: 100%;
+    margin: 0 auto;
+}
+.black {
+    background: black;
+}
+
+
+.text-title2 {
+    width: 100%;
+    padding-top: 65px;
+}
+
+.title2 {
+    display: flex;
+}
+
+.title-name2 {
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.title-name2::after {
+    content: "Proin iaculis purus consequant sem cure.";
+    display: block;
+    text-align: center;    
+    font-family: "Droid Serif", italic;
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #777777;
+    text-transform: none;
+    padding-bottom: 75px;
+}
+
+/* секция контакта */
+
+.contact {
+    position: relative;
+    height: 610px;    
+}
+
+.contact-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;    
+}
+
+/* секция формы */
+.contact-details {
+    /* background: grey; */
+    width: 940PX;
+    height: 300px; 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);   
+}
+
+
+
+form, input {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;    
+  }
+  
+  .form {
+    display: flex;
+    flex-flow: column wrap;    
+    width: 100%;
+    height: 100%;
+  }
+
+  input { 
+    line-height: 30px;
+    height: 55px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    text-indent: 6px;
+    width: 455px;
+    margin-bottom: 22px;
+    background: white;
+  }
+  
+  input[type="submit"] {
+    padding: 0 10px;
+    height: 70px;
+    width: 240px;
+    background-color: #fed136;
+    box-shadow: #fed136;
+    color: #eee;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0;
+    border: #fed136;
+  }
+  input[type="submit"]:hover {
+    box-shadow: red;
+    background-color: green;
+    cursor: pointer;
+  }
+
+  .text-right {
+    display: block;
+    width: 455px;
+    height: 210px;
+    font-size: 1.4rem; 
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;   
+  }
+
+  label {
+      display: none;
+  }
+
+
+input:invalid {
+    outline: 3px solid red;
+}
+
+input:valid {
+    outline: 3px solid green;
+}

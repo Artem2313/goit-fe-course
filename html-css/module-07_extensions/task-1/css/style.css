@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    font-size: 30px;        
+    border: 1px solid #444444;
+}
+
+caption {
+    font-size: 1.6em;
+}
+td, tr, th {
+    border: 3px solid #444444; 
+    padding: 0.5em;
+}
+
+th {
+    background: #444444;
+    color: white;  
+    font-weight: 700;  
+}
+
+td:nth-child(1) {
+    text-transform: uppercase;
+}
+
+td:nth-child(2){
+    text-align: center;
+}
+
+td:nth-child(3){
+    text-align: center;
+}

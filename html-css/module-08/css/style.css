@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;      
+    /* outline: 1px solid red; */
+}
+
+.pagewrapper {
+    max-width: 322px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    margin: 0 auto;    
+    background: linear-gradient(
+ rgba(0, 0, 0, 0.3), 
+ rgba(0, 0, 0, 0.3)
+ ), url(../img/Vector\ Smart\ Object@1X.png);
+}
+.head-list {
+    width: 55.9%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    /* background: rosybrown; */
+    flex-flow: row wrap;
+    align-items: baseline;
+}
+
+
+.logo {
+    order: 1;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 122px;
+}
+
+
+.log-item {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+
+.sign_up {
+    width: 86px;
+    height: 32px;
+    border-radius: 20px;
+    background: none;   
+    border: 2px solid #ffffff;    
+    color: #ffffff;
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+

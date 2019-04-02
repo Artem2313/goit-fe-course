@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    max-width: 960px;
+    max-height: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    }
+
+
+.box1 {
+    width: 100%;
+    height: 20px;
+    background: yellow;
+    margin-bottom: 1%;
+}
+
+.box2 {
+    width: 54.16666%;
+    height: 100px;
+    background: blue;
+}
+
+.box3 {
+    width: 20.83333%;
+    height: 100px;
+    background: grey;
+}
+
+.box4 {
+    width: 20.83333%;
+    height: 100px;
+    background: red;
+}
+
+.box5 {
+    width: 100%;
+    height: 20px;
+    background: green;
+    margin-top: 1%;
+}
+        

@@ -1,34 +1,40 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;      
-    /* outline: 1px solid red; */
+    box-sizing: border-box;    
 }
 
 .pagewrapper {
     max-width: 322px;
     margin: 0 auto;
 }
+/* поработать над картинкой (может поставить на бэк секции?)*/
 
 header {
     width: 100%;
-    margin: 0 auto;    
-    background: linear-gradient(
- rgba(0, 0, 0, 0.3), 
- rgba(0, 0, 0, 0.3)
- ), url(../img/Vector\ Smart\ Object@1X.png);
+    margin: 0 auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.1)), url(../img/Vector\ Smart\ Object@1X.png);
+    background-repeat: no-repeat;
+    background-size: cover;   
+    padding-bottom: 145px;
+    background-position: center;
+
 }
+
 .head-list {
     width: 55.9%;
     margin: 0 auto;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-bottom: 20px;
     list-style: none;
     display: flex;
     justify-content: space-around;
-    /* background: rosybrown; */
     flex-flow: row wrap;
     align-items: baseline;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
 }
 
 
@@ -37,14 +43,19 @@ header {
     width: 100%;
     text-align: center;
     text-transform: uppercase;
-    padding-top: 122px;
+    padding-top: 120px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    font-size: 1.1em;
+    margin: 0 auto;
 }
 
 
 .log-item {
     text-decoration: none;
     color: #ffffff;
-    font-size: 1em;
+    font-size: 0.8em;
     font-weight: 700;
 }
 
@@ -53,11 +64,197 @@ header {
     width: 86px;
     height: 32px;
     border-radius: 20px;
-    background: none;   
-    border: 2px solid #ffffff;    
+    background: none;
+    border: 2px solid #ffffff;
     color: #ffffff;
-    font-size: 0.9em;
+    font-size: 0.8em;
+    font-family: 'Montserrat';
+    font-style: normal;
     font-weight: 700;
 }
 
+.first-title {
+    display: block;
+    text-align: center;
+    width: 95%;    
+    margin: 0 auto;
+    text-transform: uppercase;
+    line-height: 35px;
+    font-size: 1.8em;  
+    padding-bottom: 15px;  
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    padding-top: 15px;
+    color: #ffffff;
+}
 
+.first-title::after {
+    content: "And find the perfect partner to fullfill it";
+    font-size: 0.65em;
+    display: block;
+    text-transform: none;
+    width: 80%;
+    margin: 0 auto;
+    line-height: 20px;
+    padding-top: 10px;    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    color: #ffffff;
+    
+}
+
+.btn-header {
+    margin: 0 auto;
+    display: block;
+    padding: 10px 50px;
+    border-radius: 20px;
+    border: none;
+    background: #ff4e50;
+    color: #ffffff;
+    outline: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.8em;    
+}
+
+.btn-header:hover {
+    background: #4e5aff;
+}
+
+
+/* Секция с партнерами */
+
+main {
+
+    width: 100%;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+.team-list {
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+.team-title {
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4em;
+    padding-bottom: 15px;
+}
+/* карточка партнера */
+.team-members {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.team-unit {
+    width: 60%;
+    margin: 0 auto;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+}
+
+.member-photo {
+    width: 66%;
+    background-image: url(../img/bradley.png);
+    background-position: center;
+    background-size: cover;
+    height: 115px;
+    border-radius: 50%;
+    position: relative;   
+}
+
+.member-photo-2 {
+    background-image: url(../img/Lucas.png);
+}
+
+.member-photo-3 {
+    background-image: url(../img/heather.png);
+}
+
+.member-photo-4 {
+    background-image: url(../img/monica.png);
+}
+
+.member-icon {
+    width: 2.2em;
+    height: 2.2em;
+    background: #ff4e50;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    position: absolute;
+    right: 0;
+    bottom: 0;      
+}
+
+.member-icon-2 {
+    background: #ffa507;
+}
+
+.member-icon-3 {
+    background: #1cd7ad;
+}
+
+.member-icon-4 {
+    background: #4e73db;
+}
+
+.member-icon-img {
+    display: block;
+    position: absolute; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-51%,-50%);   
+}
+
+.team-unit-title {
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.8em;
+    padding: 15px 0;
+}
+
+.team-unit-text {
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.8em;
+    padding-bottom: 25px;
+    color: #989898;
+}
+/* Футер с кнопкой */
+
+footer {
+    width: 100%;
+    padding-bottom: 30px;
+}
+.btn-footer {
+    margin: 0 auto;
+    display: block;
+    padding: 10px 75px;
+    border-radius: 20px;
+    border: 2px solid #ff4e50;
+    background: #ffffff;
+    color: #ff4e50;
+    outline: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.8em;    
+}
+
+.btn-footer:hover {
+    background: #4e5aff;
+}

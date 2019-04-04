@@ -71,6 +71,11 @@ header {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
+    outline: none;
+}
+
+.sign_up:hover {
+    background: red;
 }
 
 .first-title {

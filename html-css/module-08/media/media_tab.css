@@ -1,0 +1,111 @@
+@media(min-width:323px) {
+    .pagewrapper {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+    header {        
+        background: linear-gradient(rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.1)), url(../img/Vector\ Smart\ Object_tablet.png);
+            background-repeat: no-repeat;            
+            background-position: center; 
+            outline: 1px solid red;    
+            padding-bottom: 306px;                             
+         }
+    
+         .head-list {
+            width: 90%;
+            margin: 0 auto;            
+            padding-bottom: 150px;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row nowrap;
+            align-items: baseline;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+         }
+            .logo {
+                order: 0;                
+                text-align: start;
+                text-transform: uppercase;                
+                font-weight: 700;
+                color: #ffffff;
+                letter-spacing: 1.5px;
+                font-size: 1.3em;
+                margin: 0 auto;
+                padding-top: 30px;
+            }
+
+            .log-item {
+                text-decoration: none;
+                color: #ffffff;
+                font-size: 0.8em;
+                font-weight: 700;               
+            }
+            .log {
+                display: block;
+                width: 60px;
+            }
+            
+            .sign_up {
+                width: 86px;
+                height: 32px;
+                border-radius: 20px;
+                background: none;
+                border: 2px solid #ffffff;
+                color: #ffffff;
+                font-size: 0.8em;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 700;
+                outline: none;
+                margin-left: 20px;
+            }
+
+            .first-title {
+                display: block;
+                text-align: center;
+                width: 45%;    
+                margin: 0 auto;
+                text-transform: uppercase;
+                line-height: 35px;
+                font-size: 2em;  
+                padding-bottom: 15px;  
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 700;
+                padding-top: 15px;
+                color: #ffffff;
+            }
+            .first-title::after {
+                content: "And find the perfect partner to fullfill it";
+                font-size: 0.5em;
+                display: block;
+                text-transform: none;
+                width: 100%;
+                margin: 0 auto;
+                line-height: 20px;
+                padding-top: 10px;    
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 300;
+                color: #ffffff;
+                
+            }
+            .btn-header {
+                margin: 0 auto;
+                display: block;
+                padding: 10px 15px;
+                border-radius: 20px;
+                border: none;
+                background: #ff4e50;
+                color: #ffffff;
+                outline: none;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 0.6em;    
+            }
+}

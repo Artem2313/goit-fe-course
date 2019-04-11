@@ -1,0 +1,23 @@
+*{
+    outline: 1px solid red;
+}
+
+.col-md-4:nth-child(odd){
+    background: #f8d69d;
+}
+
+.col-md-4:nth-child(even){
+    background: #f89ea9;
+}
+.utka{
+    min-height: 100px;
+}
+.induk{
+    min-height: 75px;
+}
+
+@media(max-width:768px){
+    .utka {
+        min-height: 75px;
+    }    
+}

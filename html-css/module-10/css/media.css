@@ -1,0 +1,60 @@
+@media (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 2/1),
+(min-resolution: 192dpi) {
+    .container__box {
+        background-image: url(../img/Layer\ 16@2X.png);
+    }
+
+    .container__box--image1 {
+        background-image: url(../img/Layer\ 19@2X.png);
+    }
+
+    .container__box--image2 {
+        background-image: url(../img/Layer\ 18@2X.png);
+    }
+
+    .team__container:hover .container__box {
+        background: -webkit-gradient(linear,
+            left top, left bottom,
+            from(rgba(239, 138, 138, 0.9)),
+            to(rgba(235, 209, 130, 0.9))), url(../img/Layer\ 16@2X.png);
+        background: -webkit-linear-gradient(rgba(239, 138, 138, 0.9),
+            rgba(235, 209, 130, 0.9)), url(../img/Layer\ 16@2X.png);
+        background: -o-linear-gradient(rgba(239, 138, 138, 0.9),
+            rgba(235, 209, 130, 0.9)), url(../img/Layer\ 16@2X.png);
+        background: linear-gradient(rgba(239, 138, 138, 0.9),
+            rgba(235, 209, 130, 0.9)), url(../img/Layer\ 16@2X.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .team__container:hover .container__box--image1 {
+        background: -webkit-gradient(linear,
+            left top, left bottom,
+            from(rgba(239, 138, 138, 0.9)),
+            to(rgba(235, 209, 130, 0.9))), url(../img/Layer\ 19@2X.png);
+        background: -webkit-linear-gradient(rgba(239, 138, 138, 0.9),
+            rgba(235, 209, 130, 0.9)), url(../img/Layer\ 19@2X.png);
+        background: -o-linear-gradient(rgba(239, 138, 138, 0.9),
+            rgba(235, 209, 130, 0.9)), url(../img/Layer\ 19@2X.png);
+        background: linear-gradient(rgba(239, 138, 138, 0.9),
+            rgba(235, 209, 130, 0.9)), url(../img/Layer\ 19@2X.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .team__container:hover .container__box--image2 {
+        background: -webkit-gradient(linear,
+            left top, left bottom,
+            from(rgba(239, 138, 138, 0.9)),
+            to(rgba(235, 209, 130, 0.9))), url(../img/Layer\ 18@2X.png);
+        background: -webkit-linear-gradient(rgba(239, 138, 138, 0.9),
+            rgba(235, 209, 130, 0.9)), url(../img/Layer\ 18@2X.png);
+        background: -o-linear-gradient(rgba(239, 138, 138, 0.9),
+            rgba(235, 209, 130, 0.9)), url(../img/Layer\ 18@2X.png);
+        background: linear-gradient(rgba(239, 138, 138, 0.9),
+            rgba(235, 209, 130, 0.9)), url(../img/Layer\ 18@2X.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

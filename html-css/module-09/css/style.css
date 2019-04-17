@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;    
+}
+
+
+.pagewrapper {
+    max-width: 322px;
+    margin: 0 auto;
+    outline: 2px solid red;
+}
+
+/* поработать над картинкой (может поставить на бэк секции?)*/
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+  
+    > .col,
+    > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }

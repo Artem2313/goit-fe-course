@@ -72,6 +72,12 @@ body {
 
 .btn__link:hover {
     text-decoration: none;
+    color: white;
+}
+
+.btn__link:hover {
+    text-decoration: none;
+    color: blue;
 }
 
 .main-title {

@@ -1,0 +1,35 @@
+%MontRegular {
+  font-family: 'Mont';
+  font-size: 14px;
+}
+
+%Mont700 {
+  font-family: 'Mont';
+  font-weight: 700;
+}
+
+%Mont800 {
+  font-family: 'Mont';
+  font-weight: 800;
+}
+
+%Roboto {
+  font-family: 'Roboto';
+  font-size: 15px;
+}
+
+%inner {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+%hoverimg {
+  transform: translate(-12px, -12px);
+  box-shadow: 12px 12px rgb(79, 228, 198);
+  transition: all 200ms linear;
+}
+
+%FlexJusb {
+  display: flex;
+  justify-content: space-between;
+}

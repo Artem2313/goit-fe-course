@@ -1,0 +1,312 @@
+// header
+.header__background {
+  width: 100%;
+  background-image: $gradient, url(../images/Layer15@1X.png);
+  background-position: center;
+  background-size: cover;
+  padding-top: 40px;
+  margin-bottom: 48px;
+  padding-bottom: 232px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
+  .header__background {
+    background-image: $gradient, url(../images/picture@2x.png);
+    background-size: cover;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation {
+  @extend %FlexJusb;
+  margin-bottom: 180px;
+
+  &__logo {
+    text-decoration: none;
+    color: $color-white;
+    font-size: 30px;
+    @extend %Mont700;
+  }
+}
+
+.list {
+  width: 620px;
+  list-style: none;
+  align-items: center;
+  @extend %FlexJusb;
+
+  &__items {
+    text-decoration: none;
+    color: $color-white;
+    @extend %MontRegular;
+    text-transform: uppercase;
+  }
+
+  &__items:hover {
+    border-bottom: 2px solid rgb(252, 227, 138);
+    padding-bottom: 12px;
+    color: $color-yellow;
+  }
+}
+
+.welcome {
+  max-width: 802px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+  &__p {
+    margin-bottom: 42px;
+    font-family: 'Kaush';
+    font-size: 72px;
+    color: $color-white;
+  }
+
+  &__title {
+    margin-bottom: 124px;
+    @extend %Mont700;
+    font-size: 143px;
+    color: $color-white;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__btn {
+    color: $color-white;
+    font-size: 14px;
+    @extend %Mont700;
+    padding: 14px 32px 14px 32px;
+    border: 3px solid $color-white;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
+.container {
+  &__titleOne {
+    margin-bottom: 22px;
+    text-align: center;
+    color: $color-dark;
+    font-size: 24px;
+    font-family: 'Kaush';
+  }
+
+  &__titleTwo {
+    text-align: center;
+    @extend %Mont800;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+
+  &__titleTwo::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: $colorspan;
+    margin-left: 570px;
+    margin-top: 45px;
+    margin-bottom: 55px;
+  }
+
+  &__p {
+    @extend %Roboto;
+    color: $color-grey;
+    margin-bottom: 90px;
+    text-align: center;
+  }
+}
+
+.service {
+  @extend %FlexJusb;
+  flex-wrap: wrap;
+  margin-bottom: 92px;
+
+  &__items {
+    max-width: 336px;
+    display: flex;
+  }
+
+  &__items:nth-child(-n+3) {
+    margin-bottom: 100px;
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 28px;
+    fill: $color-green;
+  }
+
+  &__title {
+    @extend %MontRegular;
+    color: $color-dark;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    @extend %Roboto;
+    color: $color-grey;
+  }
+}
+
+.team {
+  @extend %FlexJusb;
+  margin-bottom: 82px;
+
+  &__foto {
+    margin-bottom: 30px;
+    transition: all 200ms linear;
+    width: 380px;
+    height: 470px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__fotoOne {
+    background-image: url(../images/1.png);
+  }
+
+  &__fotoTwo {
+    background-image: url(../images/2.png);
+  }
+
+  &__fotoThree {
+    background-image: url(../images/3.png);
+  }
+
+  &__name {
+    margin-bottom: 15px;
+    @extend %MontRegular;
+    color: $color-dark;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__position {
+    @extend %Roboto;
+    font-style: italic;
+    color: $color-grey;
+    text-align: center;
+  }
+
+  &__itemOne:hover &__fotoOne {
+    @extend %hoverimg;
+    background: $gradient, url(../images/1.png);
+  }
+
+  &__itemTwo:hover &__fotoTwo {
+    @extend %hoverimg;
+    background: $gradient, url(../images/2.png);
+  }
+
+  &__itemThree:hover &__fotoThree {
+    @extend %hoverimg;
+    background: $gradient, url(../images/3.png);
+  }
+
+  &__item:hover .inner {
+    display: flex;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
+  .team__fotoOne {
+    background: url(../images/1@2x.png);
+    background-size: cover;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
+  .team__fotoTwo {
+    background: url(../images/2@2x.png);
+    background-size: cover;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
+  .team__fotoThree {
+    background: url(../images/3@2x.png);
+    background-size: cover;
+  }
+}
+
+.inner {
+  width: 224px;
+  height: 56px;
+  display: none;
+  background-color: $color-yellow;
+
+  &__ic {
+    outline: 1px solid $color-red;
+    width: 56px;
+    padding: 15px 20px 15px 23px;
+    @extend %inner;
+  }
+
+  &__facebook {
+    background-image: url(../images/facebook.png);
+  }
+
+  &__twit {
+    background-image: url(../images/twitter.png);
+  }
+
+  &__pin {
+    background-image: url(../images/pinterest.png);
+  }
+
+  &__insta {
+    background-image: url(../images/instagram.png);
+  }
+
+  &__ic:hover {
+    background-color: $color-green;
+  }
+}
+
+// footer
+.footer {
+  padding: 12px 0 12px 0;
+  @extend %FlexJusb;
+  align-items: center;
+  border-top: 1px solid $color-border;
+
+  &__text {
+    @extend %MontRegular;
+    color: $color-dark;
+  }
+
+  &__textSpan {
+    color: $colorspan;
+  }
+}
+
+.button__email {
+  width: 230px;
+  height: 40px;
+  border: 1px solid $color-border;
+  @extend %Roboto;
+  padding-left: 13px;
+  color: $color-border;
+}
+
+.button__subscribe {
+  width: 150px;
+  height: 40px;
+  background-color: $color-green;
+  border: none;
+  @extend %Mont700;
+  color: $color-white;
+  text-transform: uppercase;
+  margin-left: -5px;
+  cursor: pointer;
+}

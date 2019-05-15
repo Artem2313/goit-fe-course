@@ -3,20 +3,21 @@
     margin: 0;
     padding: 0;
 }
+
+
 /* Начало меню */
+
 .header {
     max-width: 1110px;
     height: 92px;
-    margin: 0 auto;    
+    margin: 0 auto;
     position: relative;
     list-style: none;
     text-decoration: none;
 }
 
-
-
 .menu>li {
-    position: absolute;    
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     list-style: none;
@@ -24,7 +25,7 @@
 }
 
 .menu_item {
-    right: 0;    
+    right: 0;
 }
 
 li>a {
@@ -73,7 +74,6 @@ li>a {
     font-size: 32px;
 }
 
-
 .list_item:hover {
     color: #1abc9c;
 }
@@ -82,15 +82,19 @@ li>a {
     color: rgb(241, 226, 11);
 }
 
+
 /* Конец меню */
+
 main {
     width: 1600px;
     margin: 0 auto;
 }
-.slider{        
+
+.slider {
     padding: 250px 0 350px 0;
-    margin: 0 auto;       
+    margin: 0 auto;
 }
+
 .background {
     background-image: url(../img/slider.png);
     display: block;
@@ -99,15 +103,14 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 .inside_box {
-    width: 1110px;    
-    margin: 0 auto;    
+    width: 1110px;
+    margin: 0 auto;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%)    
+    transform: translateX(-50%)
 }
 
 .slider_text {
@@ -115,27 +118,28 @@ main {
     width: 730px;
     position: absolute;
     top: 43%;
-    left: 50%;    
-    transform: translate(-50%,-50%);    
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .first_head {
-color: white;
-font-family: Roboto Black, sans-serif;
+    color: white;
+    font-family: Roboto Black, sans-serif;
     font-weight: 900;
-    font-size: 46px; 
-    text-align: center;   
+    font-size: 46px;
+    text-align: center;
 }
 
 .first_text {
     color: white;
-font-family: Roboto White, sans-serif;    
+    font-family: Roboto White, sans-serif;
     font-size: 21px;
-    padding-top:8px;
+    padding-top: 8px;
     text-align: center;
 }
 
-.before, .after {
+.before,
+.after {
     height: 104px;
     width: 104px;
     background: #78c5b2;
@@ -143,9 +147,9 @@ font-family: Roboto White, sans-serif;
     position: absolute;
     top: 37%;
     text-align: center;
-    color: #ffff; 
-    padding-top: 8px;   
-    font-size:  80px;
+    color: #ffff;
+    padding-top: 8px;
+    font-size: 80px;
 }
 
 .before {
@@ -156,26 +160,22 @@ font-family: Roboto White, sans-serif;
     right: 0;
 }
 
-
-.before:hover, .after:hover {
+.before:hover,
+.after:hover {
     background: yellow;
     color: blue;
 }
 
-
 .background:hover {
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.3), 
-        rgba(0, 0, 0, 0.3)
-        ), url(../img/slider.png);
-        display: block;
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/slider.png);
+    display: block;
     width: 100%;
     height: auto;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
 }
+
 
 /* Конец слайдера */
 
@@ -185,9 +185,6 @@ font-family: Roboto White, sans-serif;
     background: #e9f0fd;
     margin: 0 auto;
 }
-
-
-
 
 .first_title {
     width: 100%;
@@ -216,6 +213,7 @@ font-family: Roboto White, sans-serif;
     margin-top: 16px;
 }
 
+
 /* конец заголовка */
 
 .collection {
@@ -229,17 +227,17 @@ font-family: Roboto White, sans-serif;
 
 .collection_block {
     width: 1110px;
-    height: 325px;    
+    height: 325px;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);    
+    transform: translateX(-50%);
 }
 
 .product_card {
     position: relative;
     /* outline: 1px solid red; */
-    width: 255px; 
-    height: 322px;    
+    width: 255px;
+    height: 322px;
 }
 
 .product_name {
@@ -248,9 +246,9 @@ font-family: Roboto White, sans-serif;
     left: 0;
     background: #323232;
     color: #ffffff;
-    width: 80%;  
+    width: 80%;
     height: 40px;
-    padding: 10px 0 14px 14px;  
+    padding: 10px 0 14px 14px;
     font-weight: 700;
     font-family: Roboto Black, sans-serif;
 }
@@ -261,10 +259,10 @@ font-family: Roboto White, sans-serif;
     right: 0;
     background: #8c8c8c;
     color: #ffffff;
-    width: 20%;      
+    width: 20%;
     height: 40px;
-    font-weight: 900; 
-    font-family: Roboto Black, sans-serif;   
+    font-weight: 900;
+    font-family: Roboto Black, sans-serif;
     padding-top: 7px;
     text-align: center;
 }
@@ -273,13 +271,13 @@ font-family: Roboto White, sans-serif;
     position: absolute;
     width: 235px;
     height: 262px;
-    background-color: rgb(0, 0, 0, 0.5);   
+    background-color: rgb(0, 0, 0, 0.5);
     top: 11px;
     left: 10px;
     display: none;
 }
 
-.product_card:hover .overlay {    
+.product_card:hover .overlay {
     display: block;
 }
 
@@ -296,13 +294,7 @@ font-family: Roboto White, sans-serif;
     top: 79px;
     left: 35px;
     width: 166px;
-    height: 107px;    
-    
-}
-
-
-.product_card:hover .inside_menu{
-    background: black;
+    height: 107px;
 }
 
 .menu_item1 {
@@ -315,8 +307,9 @@ font-family: Roboto White, sans-serif;
     color: black;
     opacity: 1;
     text-align: center;
-font-size: 45px;
-color: white;
+    font-size: 32px;
+    padding-top: 6px;
+    color: white;
 }
 
 .menu_item2 {
@@ -328,44 +321,50 @@ color: white;
     height: 48px;
     border: 1px solid white;
     text-align: center;
-font-size: 45px;
-color: white;
+    font-size: 32px;
+    padding-top: 6px;
+    color: white;
 }
 
 .menu_item3 {
     position: absolute;
     right: 0;
-    top: 0;    
+    top: 0;
     width: 48px;
     height: 48px;
     border: 1px solid white;
     text-align: center;
-font-size: 45px;
-color: white;
+    font-size: 32px;
+    padding-top: 6px;
+    color: white;
 }
 
 .menu_item4 {
     position: absolute;
     left: 0;
-    bottom: 0;    
+    bottom: 0;
     width: 100%;
     height: 48px;
     border: 1px solid white;
-    background-image: url(../img/black-square.jpg);
+    background: #323232;
     opacity: 1;
     font-size: 18px;
     padding-left: 1px;
     padding-top: 15px;
-    color: white;    
+    color: white;
 }
 
-.menu_item1:hover, .menu_item2:hover, .menu_item3:hover, .menu_item4:hover {
+.menu_item1:hover,
+.menu_item2:hover,
+.menu_item3:hover,
+.menu_item4:hover {
     background: #1abc9c;
     border: 1px solid #1abc9c;
+    cursor: pointer;
 }
 
 .card {
-    position: absolute;    
+    position: absolute;
     top: -50%;
     transform: translateY(50.5%)
 }
@@ -385,7 +384,7 @@ color: white;
 .footer {
     width: 1600px;
     height: 155px;
-    background: linear-gradient(#e9f0fd 50%,black 50%);
+    background: linear-gradient(#e9f0fd 50%, black 50%);
     position: relative;
     transform: translateX(-15.33%)
 }

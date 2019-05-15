@@ -519,6 +519,16 @@ template {
   color: #fce38a;
 }
 
+.list__svg {
+  width: 15px;
+  height: 15px;
+  fill: white;
+}
+
+.list__svg:hover {
+  fill: #fce38a;
+}
+
 .welcome {
   max-width: 802px;
   display: flex;
@@ -552,6 +562,11 @@ template {
   cursor: pointer;
 }
 
+.welcome__btn:hover {
+  color: #fce38a;
+  border: 3px solid #fce38a;
+}
+
 .container__titleOne {
   margin-bottom: 22px;
   text-align: center;
@@ -572,7 +587,7 @@ template {
   width: 60px;
   height: 3px;
   background-color: red;
-  margin-left: 570px;
+  margin: 0 auto;
   margin-top: 45px;
   margin-bottom: 55px;
 }
@@ -601,6 +616,7 @@ template {
   width: 32px;
   height: 32px;
   margin-right: 28px;
+  padding-top: 7px;
   fill: #4fe4c6;
 }
 
@@ -700,6 +716,26 @@ template {
 
 .inner__ic:hover {
   background-color: #4fe4c6;
+}
+
+.inner__overlay {
+  position: relative;
+}
+
+.inner__overlay:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 0;
+}
+
+.inner__overlay:hover:before {
+  display: block;
+  background-color: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
 }
 
 .footer {

@@ -4,18 +4,21 @@
     box-sizing: border-box;
     /* outline: 1px solid red; */
 }
+
 .pagewrapper1 {
-    width: 1400px;
+    max-width: 1400px;
     margin: 0 auto;
     background: white;
 }
 
 .pagewrapper2 {
-    width: 940px;
+    max-width: 940px;
     margin: 0 auto;
 }
 
+
 /* Хеадер */
+
 .header {
     padding-top: 44px;
     width: 940px;
@@ -29,29 +32,29 @@
     list-style: none;
     justify-content: space-between;
     align-items: baseline;
-    margin: 0;    
+    margin: 0;
 }
 
 .menu-item {
-    margin: 0;    
+    margin: 0;
 }
 
 .link-item:hover {
-    color: #fed136;    
+    color: #fed136;
 }
 
 .logo {
     flex-basis: 44%;
     margin: 0;
     font-family: "Wisdom Script Regular", sans-serif;
-    font-size: 2rem;    
+    font-size: 2rem;
     color: #fed136;
     padding-left: 10px;
 }
 
 .link-item {
     text-decoration: none;
-    text-transform: uppercase;    
+    text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     font-weight: 700;
@@ -88,7 +91,7 @@ main {
 .title-name::after {
     content: "Proin iaculis purus consequant sem cure.";
     display: block;
-    text-align: center;    
+    text-align: center;
     font-family: "Droid Serif", italic;
     font-style: italic;
     font-size: 2rem;
@@ -96,6 +99,7 @@ main {
     color: #777777;
     text-transform: none;
 }
+
 
 /* сервисы */
 
@@ -111,12 +115,12 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: center;  
-    justify-content: space-between;  
+    align-content: center;
+    justify-content: space-between;
 }
 
 .img-wrapper {
-    border: 3px solid #fed136;    
+    border: 3px solid #fed136;
     border-radius: 50%;
     padding: 10px;
     width: 67px;
@@ -133,12 +137,13 @@ main {
 }
 
 .serv-descr {
-    font-family: 'Roboto Slab', serif;    
+    font-family: 'Roboto Slab', serif;
     font-weight: 400;
     font-size: 0.8rem;
     text-align: center;
     line-height: 20px;
 }
+
 
 /* второй заголовок */
 
@@ -146,10 +151,10 @@ footer {
     width: 100%;
     margin: 0 auto;
 }
+
 .black {
     background: black;
 }
-
 
 .text-title2 {
     width: 100%;
@@ -174,7 +179,7 @@ footer {
 .title-name2::after {
     content: "Proin iaculis purus consequant sem cure.";
     display: block;
-    text-align: center;    
+    text-align: center;
     font-family: "Droid Serif", italic;
     font-style: italic;
     font-size: 2rem;
@@ -184,45 +189,47 @@ footer {
     padding-bottom: 75px;
 }
 
+
 /* секция контакта */
 
 .contact {
     position: relative;
-    height: 610px;    
+    height: 610px;
 }
 
 .contact-img {
     position: absolute;
     bottom: 0;
-    right: 0;    
+    right: 0;
 }
 
+
 /* секция формы */
+
 .contact-details {
     /* background: grey; */
     width: 940PX;
-    height: 300px; 
+    height: 300px;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);   
+    transform: translateX(-50%);
 }
 
-
-
-form, input {
+form,
+input {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 1.4rem;    
-  }
-  
-  .form {
+    font-size: 1.4rem;
+}
+
+.form {
     display: flex;
-    flex-flow: column wrap;    
+    flex-flow: column wrap;
     width: 100%;
     height: 100%;
-  }
+}
 
-  input { 
+input {
     line-height: 30px;
     height: 55px;
     padding: 10px 10px;
@@ -231,9 +238,9 @@ form, input {
     width: 455px;
     margin-bottom: 22px;
     background: white;
-  }
-  
-  input[type="submit"] {
+}
+
+input[type="submit"] {
     padding: 0 10px;
     height: 70px;
     width: 240px;
@@ -246,26 +253,26 @@ form, input {
     transform: translateX(-50%);
     margin-bottom: 0;
     border: #fed136;
-  }
-  input[type="submit"]:hover {
+}
+
+input[type="submit"]:hover {
     box-shadow: red;
     background-color: green;
     cursor: pointer;
-  }
+}
 
-  .text-right {
+.text-right {
     display: block;
     width: 455px;
     height: 210px;
-    font-size: 1.4rem; 
+    font-size: 1.4rem;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;   
-  }
+    font-weight: 700;
+}
 
-  label {
-      display: none;
-  }
-
+label {
+    display: none;
+}
 
 input:invalid {
     outline: 3px solid red;

@@ -404,11 +404,6 @@ template {
   font-size: 15px;
 }
 
-.inner__ic {
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .team__itemOne:hover .team__fotoOne,
 .team__itemTwo:hover .team__fotoTwo,
 .team__itemThree:hover .team__fotoThree {
@@ -692,50 +687,41 @@ template {
   background-color: #fce38a;
 }
 
-.inner__ic {
-  outline: 1px solid rgba(243, 129, 129, 0.384);
-  width: 56px;
-  padding: 15px 20px 15px 23px;
+.inner__item {
+  width: 45px;
+  height: 45px;
+  background: #fce38a;
+  font-size: 32px;
+  text-align: center;
+  padding: 9px 9px;
+  outline: 3px solid rgba(243, 129, 129, 0.384);
 }
 
-.inner__facebook {
-  background-image: url(../images/facebook.png);
+.inner__item:hover {
+  background: #f38181;
 }
 
-.inner__twit {
-  background-image: url(../images/twitter.png);
+.inner__item:hover .inner__svg {
+  fill: white;
 }
 
-.inner__pin {
-  background-image: url(../images/pinterest.png);
+.inner__item:hover .inner__link {
+  text-decoration: none;
 }
 
-.inner__insta {
-  background-image: url(../images/instagram.png);
-}
-
-.inner__ic:hover {
-  background-color: #4fe4c6;
-}
-
-.inner__overlay {
-  position: relative;
-}
-
-.inner__overlay:before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
+.inner__svg {
   width: 100%;
   height: 100%;
-  display: none;
-  z-index: 0;
+  fill: #f38181;
 }
 
-.inner__overlay:hover:before {
-  display: block;
-  background-color: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+.inner__link {
+  text-decoration: none;
+  color: #f38181;
+}
+
+.inner__link:hover {
+  text-decoration: none;
 }
 
 .footer {
@@ -757,7 +743,7 @@ template {
   height: 40px;
   border: 1px solid #e7e7e7;
   padding-left: 13px;
-  color: #e7e7e7;
+  color: #333333;
 }
 
 .button__subscribe {

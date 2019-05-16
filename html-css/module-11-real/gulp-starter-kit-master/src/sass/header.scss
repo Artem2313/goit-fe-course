@@ -1,0 +1,96 @@
+// header
+.header__background {
+    width: 100%;
+    background-image: $gradient, url(../images/Layer15@1X.png);
+    background-position: center;
+    background-size: cover;
+    padding-top: 40px;
+    margin-bottom: 48px;
+    padding-bottom: 232px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .header__background {
+        background-image: $gradient, url(../images/picture@2x.png);
+        background-size: cover;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navigation {
+    @extend %FlexJusb;
+    margin-bottom: 180px;
+    &__logo {
+        text-decoration: none;
+        color: $color-white;
+        font-size: 30px;
+        @extend %Mont700;
+    }
+}
+
+.list {
+    width: 620px;
+    list-style: none;
+    align-items: center;
+    @extend %FlexJusb;
+    &__items {
+        text-decoration: none;
+        color: $color-white;
+        @extend %MontRegular;
+        text-transform: uppercase;
+    }
+    &__items:hover {
+        border-bottom: 2px solid rgb(252, 227, 138);
+        padding-bottom: 12px;
+        color: $color-yellow;
+    }
+    &__svg {
+        width: 15px;
+        height: 15px;
+        fill: rgba(255, 255, 255, 255);
+    }
+    &__svg:hover {
+        fill: $color-yellow;
+    }
+}
+
+.welcome {
+    max-width: 802px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    &__p {
+        margin-bottom: 42px;
+        font-family: 'Kaush';
+        font-size: 72px;
+        color: $color-white;
+    }
+    &__title {
+        margin-bottom: 124px;
+        @extend %Mont700;
+        font-size: 143px;
+        color: $color-white;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__btn {
+        color: $color-white;
+        font-size: 14px;
+        @extend %Mont700;
+        padding: 14px 32px 14px 32px;
+        border: 3px solid $color-white;
+        text-transform: uppercase;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    &__btn:hover {
+        color: $color-yellow;
+        border: 3px solid $color-yellow;
+    }
+}

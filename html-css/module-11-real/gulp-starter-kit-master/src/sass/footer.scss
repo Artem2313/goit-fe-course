@@ -1,0 +1,35 @@
+// footer
+.footer {
+    padding: 12px 0 12px 0;
+    @extend %FlexJusb;
+    align-items: center;
+    border-top: 1px solid $color-border;
+    &__text {
+        @extend %MontRegular;
+        color: $color-dark;
+    }
+    &__textSpan {
+        color: $colorspan;
+    }
+}
+
+.button__email {
+    width: 230px;
+    height: 40px;
+    border: 1px solid $color-border;
+    @extend %Roboto;
+    padding-left: 13px;
+    color: $color-dark;
+}
+
+.button__subscribe {
+    width: 150px;
+    height: 40px;
+    background-color: $color-green;
+    border: none;
+    @extend %Mont700;
+    color: $color-white;
+    text-transform: uppercase;
+    margin-left: -5px;
+    cursor: pointer;
+}

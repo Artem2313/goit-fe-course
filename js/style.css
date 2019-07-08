@@ -9,6 +9,16 @@ a {
 }
 
 .Module__2 {
-    background: #f8e67c;
+    background: #f8b47c;
+    width: max-content;
+}
+
+.Module__3 {
+    background: #7cf89b;
+    width: max-content;
+}
+
+.Module__4 {
+    background: #7268fc;
     width: max-content;
 }

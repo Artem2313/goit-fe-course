@@ -39,9 +39,8 @@ class Notepad {
        *
        * Принимает: идентификатор заметки
        * Возвращает: заметку с совпавшим полем id или undefined если ничего не найдено
-       */        
-
-       for(const note of this.notes) {
+       */
+       for(const note of this._notes) {
            if(note.id === id) {
                return note;
            };         
@@ -120,11 +119,18 @@ class Notepad {
        * Принимает: идентификатор заметки и объект, полями которого надо обновить заметку
        * Возвращает: обновленную заметку
        */
-      const note = this.findNoteById(id);
-  
-      if(!note) return;
-  
-      note[updatedContent.title] = updatedContent.title;
+      let newUpdate;
+		  let findIdIndex;
+		  const findId = this.findNoteById(id);
+		  if (findId.id === id) {
+			findIdIndex = this.notes.indexOf(findId);
+			newUpdate = {
+				...findId,
+				...updatedContent
+			};
+			this._notes[findIdIndex] = newUpdate;
+		  }
+		  return newUpdate;
     };
 
 
@@ -135,38 +141,34 @@ class Notepad {
        * Принимает: идентификатор заметки
        * Возвращает: ничего
        */
-      for(let i = 0; i < this.notes.length; i += 1) {
-          const note = this.notes[i];
-  
-          if(note.id === id) {
-              this.notes.splice(i, 1);
-              return;
-          }
+      const foundId = this.findNoteById(id);
+      if (foundId.id === id) {
+        this._notes.splice(this._notes.indexOf(foundId), 1)
       }
     };
 
 }
-
+//priority types obj
 const PRIORITY_TYPES = {
   LOW: 0,
   NORMAL: 1,
   HIGH: 2,
 };
-
+//icon types obj
 const ICON_TYPES = {
   EDIT: 'edit',
   DELETE: 'delete',
   ARROW_DOWN: 'expand_more',
   ARROW_UP: 'expand_less',
 };
-
+//action buttons obj
 const NOTE_ACTIONS = {
   DELETE: 'delete-note',
   EDIT: 'edit-note',
   INCREASE_PRIORITY: 'increase-priority',
   DECREASE_PRIORITY: 'decrease-priority',
 };
-
+// initial notes obj
 const initialNotes = [
   {
     id: 'id-1',
@@ -197,11 +199,16 @@ const initialNotes = [
     priority: PRIORITY_TYPES.LOW,
   },
 ];
-
-
+//Coding starts here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//notepad Sample
 const notepad = new Notepad(initialNotes);
-
-
+// referrences
+const ref = {
+  
+  ul: document.querySelector('.note-list'),
+  
+  };
+// Element with a tag and a class
 const createElement = (tag, ...className) => {
 
   const createElement = document.createElement(tag);
@@ -210,147 +217,72 @@ const createElement = (tag, ...className) => {
   
   return createElement;
   
-  };
-  
-   
-  
-  const ref = {
-  
-  ul: document.querySelector('.note-list'),
-  
-  };
-  
-   
-  
-  const createListItem = note => {
-  
-  const listItem = createElement('li', 'note-list__item');
-
-  listItem.dataset.id = note.id;
-  
-  const notes = createElement('div', 'note');
-  
-  //title
-  
-  const noteContent = createElement('div', 'note__content');
-  
-  const title = createElement('h2', 'note__title');
-  
-  title.textContent = note.title;
-  
-  //body
-  
-  const body = createElement('p', 'note__body');
-  
-  body.textContent = note.body;
-  
-  noteContent.append(title, body);
-  
-  notes.append(noteContent);
-  
-  listItem.append(notes);
-
-  //footer
-
-  const footer = createElement('div', 'note__footer');
-
-  notes.append(footer);  
-
-  //footer_section 1
-
-  const footerSection = createElement('section', 'note__section');
-
-  footer.append(footerSection);
-
-  //buttons.....
-
-
-
-  //decrease button
-
-  const decreasePriorityButton = createElement('button', 'action');
-  decreasePriorityButton.dataset.action = NOTE_ACTIONS.DECREASE_PRIORITY
-
-  footerSection.append(decreasePriorityButton);
-
-  const iDecreasePriorityButton = createElement('i', 'material-icons', 'action__icon');
-  
-  iDecreasePriorityButton.textContent = ICON_TYPES.ARROW_DOWN;
-
-  decreasePriorityButton.append(iDecreasePriorityButton);
-
-
-  //increase button
-  
-  
-  const increasePriorityButton = createElement('button', 'action');
-  increasePriorityButton.dataset.action = NOTE_ACTIONS.INCREASE_PRIORITY
-
-  footerSection.append(increasePriorityButton);
-
-  const iIncreasePriorityButton = createElement('i', 'material-icons', 'action__icon');
-  
-  iIncreasePriorityButton.textContent = ICON_TYPES.ARROW_UP;
-
-  increasePriorityButton.append(iIncreasePriorityButton);
-
-  
-
-  const notePriority = createElement('span', 'note__priority');
-  
-   notePriority.textContent = `Priority: ${note.priority}` 
-   footerSection.append(notePriority);
-
-   //footer_section 2
-
-  const footerSection2 = createElement('section', 'note__section');
-
-  footer.append(footerSection2);
-
-  // edit-button
-
-  const editButton = createElement('button', 'action');
-  editButton.dataset.action = NOTE_ACTIONS.EDIT
-
-  footerSection2.append(editButton);
-
-  const iEdit = createElement('i', 'material-icons', 'action__icon');
-  
-  iEdit.textContent = ICON_TYPES.EDIT;
-
-  editButton.append(iEdit);
-  
-  // delete-button
-
-  const deleteButton = createElement('button', 'action');
-  deleteButton.dataset.action = NOTE_ACTIONS.DELETE
-
-  footerSection2.append(deleteButton);
-
-  const iDelete = createElement('i', 'material-icons', 'action__icon');
-  
-  iDelete.textContent = ICON_TYPES.DELETE;
-
-  deleteButton.append(iDelete);
-  
-  // finish
-  
-  return listItem;
-  
+  };   
+// Creating notes content
+  const createNoteContent = (title, body) => {
+    const noteContent = createElement('div', 'note__content');
+    const noteTitle = createElement('h2', 'note__title');
+    noteTitle.textContent = title;
+    const noteBody = createElement('p', 'note__body');
+    noteBody.textContent = body;
+    noteContent.append(noteTitle, noteBody);
+    return noteContent;
   }; 
+// Action buttons
+  const createActionButton = (data, icon) => {
+    const actionBtn = createElement('button', 'action');
+    actionBtn.dataset.action = data;
+    const actionIcon = createElement('i', 'material-icons');
+    actionIcon.classList.add('action__icon');
+    actionIcon.textContent = icon;
+    actionBtn.appendChild(actionIcon);
+    return actionBtn;
+  };
+// Section with buttons
+const createSection = (btnOneUp, iconOne, btnTwoDn, iconTwo) => {
+  const noteSection = createElement('secton', 'note__section');
+  noteSection.append(createActionButton(btnOneUp, iconOne), createActionButton(btnTwoDn, iconTwo));
+  return noteSection;
+} 
+// Footer
+const createNoteFooter = (priority) => {
+  const footer = createElement('footer', 'note__footer');
+  const notePriority = createElement('span', 'note__priority');  
+   notePriority.textContent = `Priority: ${priority}`;
+   const sectionOne = createSection(NOTE_ACTIONS.DECREASE_PRIORITY,
+		ICON_TYPES.ARROW_DOWN,
+		NOTE_ACTIONS.INCREASE_PRIORITY,
+    ICON_TYPES.ARROW_UP); 
+   const sectionTwo = createSection(NOTE_ACTIONS.EDIT,
+    ICON_TYPES.EDIT,
+    NOTE_ACTIONS.DELETE,
+    ICON_TYPES.DELETE);
+    
+    sectionOne.appendChild(notePriority);
+	  footer.append(
+		sectionOne,
+		sectionTwo
+	);
+	return footer;
+};
+//List-item
+const createListItem = (note) => {
+	const noteListItem = createElement('li', 'note-list__item');
+	noteListItem.dataset.id = note.id;
+	const noteDiv = createElement('div', 'note');
+	noteDiv.append(createNoteContent(note.title, note.body), createNoteFooter(note.priority));
+	noteListItem.appendChild(noteDiv);
+	return noteListItem;
+};
+//Rendering
+const renderNoteList = (listRef, notes) => {
   
-   
-  
-  const renderNoteList = (listRef, notes) => {
-  
-  const renderList = notes.map(elem => createListItem(elem));
+  const renderList = notes.map(note => createListItem(note));
   
   listRef.append(...renderList);
   
-  };
-  
-   
-  
-  renderNoteList(ref.ul, notepad.notes); 
+  };  
+//result function call 
+renderNoteList(ref.ul, notepad.notes); 
 
 

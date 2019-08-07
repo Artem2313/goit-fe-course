@@ -248,22 +248,9 @@ const createElement = (tag, ...className) => {
   
   notes.append(noteContent);
   
-  listItem.append(notes);  
-  
-  return listItem;
-  
-  };
+  listItem.append(notes);
 
-  const test = () => {
-    const create = createListItem();
-    return create;
-    
-  }
-
-  const footer = note => {
-   
-  
-    //footer
+  //footer
 
   const footer = createElement('div', 'note__footer');
 
@@ -347,9 +334,10 @@ const createElement = (tag, ...className) => {
   deleteButton.append(iDelete);
   
   // finish
-
   
-  }
+  return listItem;
+  
+  }; 
   
    
   
@@ -363,6 +351,6 @@ const createElement = (tag, ...className) => {
   
    
   
-  renderNoteList(ref.ul, notepad.notes);
+  renderNoteList(ref.ul, notepad.notes); 
 
 

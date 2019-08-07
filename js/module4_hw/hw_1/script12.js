@@ -128,11 +128,18 @@ const notepad = {
      * Принимает: идентификатор заметки и объект, полями которого надо обновить заметку
      * Возвращает: обновленную заметку
      */
-    const note = this.findNoteById(id);
-
-    if(!note) return;
-
-    note[updatedContent.title] = updatedContent.title;
+    let newUpdate;
+		  let findIdIndex;
+		  const findId = this.findNoteById(id);
+		  if (findId.id === id) {
+			findIdIndex = this.notes.indexOf(findId);
+			newUpdate = {
+				...findId,
+				...updatedContent
+			};
+			this.notes[findIdIndex] = newUpdate;
+		  }
+		  return newUpdate;
   }, 
 
   deleteNote(id) {
@@ -142,15 +149,11 @@ const notepad = {
      * Принимает: идентификатор заметки
      * Возвращает: ничего
      */
-    for(let i = 0; i < this.notes.length; i += 1) {
-        const note = this.notes[i];
-
-        if(note.id === id) {
-            this.notes.splice(i, 1);
-            return;
-        }
-    }
-  }, 
+    const foundId = this.findNoteById(id);
+      if (foundId.id === id) {
+        this.notes.splice(this.notes.indexOf(foundId), 1);
+      }
+    },   
 };
 
 

@@ -10,8 +10,7 @@ module.exports = ({ mode = 'production' }) =>
   webpackMerge(
     {
       mode,
-      context: path.resolve(__dirname, 'src'),
-      entry: './index.js',
+      entry: './src/index.js',
       output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
@@ -28,20 +27,20 @@ module.exports = ({ mode = 'production' }) =>
             use: 'html-loader'
           },
           {
-            test: /\.css$/i,
-            use: ['style-loader', 'css-loader'],
-          },
-          {
             test: /\.(gif|png|jpe?g|svg)$/i,
             use: [
               {
                 loader: 'url-loader',
                 options: {
-                  name: '[path]/[name].[ext]',
+                  name: 'images/[name].[ext]',
                   limit: 5000
                 }
               }
             ]
+          },
+          {
+            test: /\.hbs$/,
+            loader: 'handlebars-loader'
           }
         ]
       },

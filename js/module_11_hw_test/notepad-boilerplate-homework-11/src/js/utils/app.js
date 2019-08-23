@@ -6,6 +6,7 @@ import {NOTE_ACTIONS, NOTIFICATION_MESSAGES} from './constants';
 import {ref} from './ref';
 import {renderNoteList, createListItem} from './view';
 import 'notyf/notyf.min.css';
+import test from '../../template/list.hbs'
 
 
 
@@ -60,4 +61,7 @@ const handleOpenEditor = () => {
 ref.form.addEventListener('submit', addItem);
 ref.ul.addEventListener('click', removeItem);
 ref.search.addEventListener('input', searchForm);
-ref.openEditorModalBtn.addEventListener('click', handleOpenEditor)
+ref.openEditorModalBtn.addEventListener('click', handleOpenEditor);
+
+
+console.log(test);

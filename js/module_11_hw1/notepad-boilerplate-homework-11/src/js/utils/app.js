@@ -33,8 +33,8 @@ const addItem = evt => {
   const item = notepad.addItem(inputValue, textValue);
   notyf.success(NOTIFICATION_MESSAGES.NOTE_ADDED_SUCCESS);
   MicroModal.close('note-editor-modal');
-  const renderItem = createListItem(item);
-  ref.ul.append(renderItem);
+  const note = createListItem(item);
+  ref.ul.insertAdjacentHTML("beforeend", note);
   ref.form.reset();  
 };
 // delete note
@@ -47,7 +47,7 @@ const removeItem = evt => {
   }
 }
 // search note
-const searchForm = evt => { 
+const searchForm = evt => {
   evt.preventDefault();
   const findNotes = notepad.filterNotesByQuery(evt.target.value);
   renderNoteList(ref.ul, findNotes); 

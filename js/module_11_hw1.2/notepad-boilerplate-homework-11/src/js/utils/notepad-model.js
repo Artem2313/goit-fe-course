@@ -27,6 +27,7 @@ export default class Notepad {
          * Возвращает: сохраненную заметку
          *          */        
         this._notes.push(note);
+        return note;
     };
     findNoteById(id) {
         /*
@@ -35,11 +36,7 @@ export default class Notepad {
          * Принимает: идентификатор заметки
          * Возвращает: заметку с совпавшим полем id или undefined если ничего не найдено
          */
-         for(const note of this._notes) {
-             if(note.id === id) {
-                 return note;
-             };         
-         }; 
+        return this._notes.find(note => note.id === id);
     };
     updateNotePriority(id, priority) {
     
@@ -65,22 +62,15 @@ export default class Notepad {
          * Принимает: подстроку для поиска в title и body заметки
          * Возвращает: новый массив заметок, контент которых содержит подстроку
          */
-            const filteredNotes = [];
-            
-            for(const note of this.notes) {
-                const hasQueryInTitle = note.title
-                .toLowerCase()
-                .includes(query.toLowerCase());
-    
-                const hasQueryInBody = note.body
-                .toLowerCase()
-                .includes(query.toLowerCase());
-    
-                if(hasQueryInTitle || hasQueryInBody) {
-                    filteredNotes.push(note);
-                }            
-            }
-            return filteredNotes; 
+        return this._notes.filter(note => {
+          const queryLowerCase = query.toLowerCase();
+          const titleLowerCase = note.title.toLowerCase();
+          const bodyLowerCase = note.body.toLowerCase();
+          return (
+            titleLowerCase.includes(queryLowerCase) ||
+            bodyLowerCase.includes(queryLowerCase)
+          );
+        });
       };
       filterNotesByPriority(priority) {
         /*
@@ -90,16 +80,7 @@ export default class Notepad {
          * Принимает: приоритет для поиска в свойстве priority заметки
          * Возвращает: новый массив заметок с подходящим приоритетом
          */    
-        const filteredNotes = [];   
-        for(const note of this.notes) {
-            const hasPriority = note.priority;
-    
-            if(hasPriority) {
-                filteredNotes.push(note);
-            };
-            return filteredNotes;
-        }    
-    
+        return this._notes.filter(note => (note.priority = priority));    
       };
     updateNoteContent(id, updatedContent) {
         /*
@@ -130,10 +111,7 @@ export default class Notepad {
          * Принимает: идентификатор заметки
          * Возвращает: ничего
          */
-        const foundId = this.findNoteById(id);
-        if (foundId.id === id) {
-          this._notes.splice(this._notes.indexOf(foundId), 1)
-        }
+        this._notes = this._notes.filter(note => note.id !== id);
       };
     addItem(titleInput, bodyText) {
         const newItem = {

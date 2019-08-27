@@ -31,11 +31,11 @@ const addItem = evt => {
   const inputValue = input.value;
   const textValue = text.value;
   const item = notepad.addItem(inputValue, textValue);
-  notyf.success(NOTIFICATION_MESSAGES.NOTE_ADDED_SUCCESS);
-  MicroModal.close('note-editor-modal');
-  const note = createListItem(item);
+  const note = createListItem(item);    
   ref.ul.insertAdjacentHTML("beforeend", note);
-  ref.form.reset();  
+  ref.form.reset(); 
+  MicroModal.close('note-editor-modal');
+  notyf.success(NOTIFICATION_MESSAGES.NOTE_ADDED_SUCCESS);  
 };
 // delete note
 const removeItem = evt => {

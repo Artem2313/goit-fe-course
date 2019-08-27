@@ -1,4 +1,4 @@
-import template from "../../template/list.hbs";
+import template from "../../template/notelist.hbs";
 
 export const createListItem = note => {
   return template(note);

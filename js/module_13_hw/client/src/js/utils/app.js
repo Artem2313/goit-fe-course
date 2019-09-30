@@ -12,7 +12,7 @@ import * as api from "../services/api";
 const notyf = new Notyf();
 
 //notepad Sample
-const notepad = new Notepad();
+export const notepad = new Notepad();
 
 //API result function call 
 api

@@ -9,3 +9,8 @@ export const renderNoteList = (listRef, notes) => {
   listRef.innerHTML = "";
   listRef.innerHTML = noteList.join("");
 };
+
+
+
+
+

@@ -53,3 +53,13 @@ export const getNotes = () => {
         throw new Error("Error while fetching update" + responce.statusText);
     })
 };
+
+export const findNote = (id) => {
+  return fetch(`${URL}/${id}`).then( response => {
+      if (response.ok) {
+        return response.json();
+      }
+
+      throw new Error () ('Error while fetching findNote' + response.statusText);
+  })
+}

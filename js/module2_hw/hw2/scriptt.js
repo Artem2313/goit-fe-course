@@ -19,26 +19,23 @@
 
 const passwords = ['qwerty', '111qwe', '123123', 'r4nd0mp4zzw0rd'];
 let attemptsLeft = 3;
-let input = 0;
+let input;
 
 do {
-  input = prompt('Введите пароль!');
+    input = prompt('Введите пароль!');
+    if (input === null) {
+        alert('Вы нажали отмена!');
+        break;
+    }
+    else if (!passwords.includes(input)) {
+        alert(`Неверный пароль, у вас осталось ${attemptsLeft-1} попыток`);
+        attemptsLeft = attemptsLeft - 1;
+        if (attemptsLeft === 0) {
+            alert('У вас закончились попытки, аккаунт заблокирован!');
+        }
+    } else if (passwords.includes(input)) {
+        alert('Добро пожаловать!');
+        break;
+    }
 
-  if(input === null) {
-      alert('Вы нажали отмена');
-      break;
-  }
-
-  if(passwords.includes(input)) {
-      alert('Добро пожаловать!');
-      break;
-  } else if(!passwords.includes(input)) {
-      attemptsLeft -= 1;
-      alert(`Неверный пароль, у вас осталось ${attemptsLeft} попыток`);      
-  } else if (attemptsLeft === 0){
-      break;
-  }
-
-} while (attemptsLeft !== 0) {
-    alert('У вас закончились попытки, аккаунт заблокирован!');
-}
+} while (attemptsLeft > 0)

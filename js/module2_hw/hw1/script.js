@@ -18,7 +18,6 @@
 let input;
 const numbers = [];
 let total = 0;
-let count = 0;
 
 while (true) {
   input = prompt('Введите число!');
@@ -38,12 +37,11 @@ while (true) {
 
   numbers.push(input);
   
-  console.log(numbers);
+  console.log(numbers);}
 
 for (let key of numbers) {
-  total = count += key;
+  total = total += key;
 }
 
 console.log('Общая сумма чисел равна ' + total);
 alert('Общая сумма чисел равна ' + total);
-}

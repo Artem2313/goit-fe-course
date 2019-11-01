@@ -29,7 +29,7 @@ class Notepad {
          * Принимает: объект заметки
          * Возвращает: сохраненную заметку
          *          */        
-        this._notes.push(note);
+        this.notes.push(note);
     };
 
     findNoteById(id) {

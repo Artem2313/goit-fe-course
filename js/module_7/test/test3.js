@@ -12,23 +12,30 @@
   PS: обязательно используй перебирающие методы массивов, никаких for!
 */
 
-const guests = [
+const users = [
     { name: 'Mango', inactiveDays: 15, isActive: true },
     { name: 'Poly', inactiveDays: 8, isActive: false },
     { name: 'Ajax', inactiveDays: 32, isActive: false },
     { name: 'Chelsey', inactiveDays: 85, isActive: true }
   ];
-  
-  const setGuestState = (guests, period) => guests.map(guests => guests.inactiveDays >= period ? guests.inactive === true : guests.inactive === false)
+
+  const setGuestState = (users, period) =>
+  users.map(
+    obj =>
+      obj.inactiveDays < period
+        ? { ...obj, isActive: true }
+        : { ...obj, isActive: false }
+  );
+    
   // Вызовы функции для проверки
   console.log(
-    setGuestState(guests, 10)
+    setGuestState(users, 10)
   ); // Объекты Mango, Ajax, Chelsey получат isActive false, а Poly наоборот true
   
   console.log(
-    setGuestState(guests, 20)
+    setGuestState(users, 20)
   ); // Объекты Ajax, Chelsey получат isActive false, а Mango и Poly наоборот true
   
   console.log(
-    setGuestState(guests, 50)
+    setGuestState(users, 50)
   ); // Объект Chelsey получит isActive false, а Mango, Poly и Ajax наоборот true

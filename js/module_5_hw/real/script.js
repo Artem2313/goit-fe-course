@@ -14,7 +14,7 @@ const Notepad = function Notepad(notes = []) {
          * Возвращает: все заметки, значение свойства notes
          */
     
-         return this.notes;
+         return notes;
       };
   
     this.saveNote = function saveNote (note) {
@@ -24,7 +24,7 @@ const Notepad = function Notepad(notes = []) {
          * Принимает: объект заметки
          * Возвращает: сохраненную заметку
          *          */        
-        this.notes.push(note);
+        notes.push(note);
     };
 
     this.findNoteById = function findNoteById(id) {
@@ -35,7 +35,7 @@ const Notepad = function Notepad(notes = []) {
          * Возвращает: заметку с совпавшим полем id или undefined если ничего не найдено
          */        
 
-         for(const note of this.notes) {
+         for(const note of notes) {
              if(note.id === id) {
                  return note;
              };         
@@ -137,7 +137,7 @@ const Notepad = function Notepad(notes = []) {
      */
     const foundId = this.findNoteById(id);
       if (foundId.id === id) {
-        this.notes.splice(this.notes.indexOf(foundId), 1);
+        notes.splice(notes.indexOf(foundId), 1);
       }
   };
 };

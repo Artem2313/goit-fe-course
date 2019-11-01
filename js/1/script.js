@@ -15,12 +15,26 @@ let message;
 
 const isPassword = prompt('Enter your password');
 
-if(!isPassword) {
-    message = 'Отменено пользователем!';
-} else if(isPassword === ADMIN_PASSWORD){
-    message = 'Добро пожаловать!';
-} else {
-    message = 'Доступ запрещен, неверный пароль!';
+// if(!isPassword) {
+//     message = 'Отменено пользователем!';
+// } else if(isPassword === ADMIN_PASSWORD){
+//     message = 'Добро пожаловать!';
+// } else {
+//     message = 'Доступ запрещен, неверный пароль!';
+// }
+
+switch(true) {
+    case isPassword === ADMIN_PASSWORD:
+        message = "Добро пожаловать!";
+        break;
+
+        case isPassword !== ADMIN_PASSWORD:
+                message = "Доступ запрещен, неверный пароль!";
+                break;  
+
+        default:
+            message = "Bye"
+            break;
 }
 
 alert(message);

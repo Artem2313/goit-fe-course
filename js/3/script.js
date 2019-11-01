@@ -19,12 +19,12 @@
 // PS: используй switch
 
 
-const country = prompt('Куда доставить товар?').toLowerCase();
-let china = 100;
-let southAmerica = 250;
-let australia = 170;
-let india = 80;
-let jamaica = 120;
+// const country = prompt('Куда доставить товар?').toLowerCase();
+// let china = 100;
+// let southAmerica = 250;
+// let australia = 170;
+// let india = 80;
+// let jamaica = 120;
 
 
 // Пользователь может оформить доставку товара к себе в страну, указав ее при посещении страницы в prompt. 
@@ -61,26 +61,27 @@ if (!country) {
 } else {
     let countryLowerCase = country.toLowerCase();
    
-    switch (countryLowerCase) {    
+    switch (countryLowerCase) {       
+        
 
         case 'китай':
-        alert('Доставка в ' + countryLowerCase + ' будет стоить ' + china + ' кредитов.'); 
+        alert('Доставка в ' + countryLowerCase.charAt(0).toUpperCase() + countryLowerCase.slice(1) + ' будет стоить ' + china + ' кредитов.'); 
         break;
     
         case 'австралия':
-        alert('Доставка в ' + countryLowerCase + ' будет стоить ' + australia + ' кредитов.'); 
+        alert('Доставка в ' + countryLowerCase.charAt(0).toUpperCase() + countryLowerCase.slice(1) + ' будет стоить ' + australia + ' кредитов.'); 
         break;
     
         case 'южная америка':
-        alert('Доставка в ' + countryLowerCase + ' будет стоить ' + southAmerica + ' кредитов.'); 
+        alert('Доставка в ' + countryLowerCase.charAt(0).toUpperCase() + countryLowerCase.slice(1) + ' будет стоить ' + southAmerica + ' кредитов.'); 
         break;
     
         case 'индия':
-        alert('Доставка в ' + countryLowerCase + ' будет стоить ' + india + ' кредитов.'); 
+        alert('Доставка в ' + countryLowerCase.charAt(0).toUpperCase() + countryLowerCase.slice(1) + ' будет стоить ' + india + ' кредитов.'); 
         break;
     
         case 'ямайка':
-        alert('Доставка в ' + countryLowerCase + ' будет стоить ' + jamaica + ' кредитов.'); 
+        alert('Доставка в ' + countryLowerCase.charAt(0).toUpperCase() + countryLowerCase.slice(1) + ' будет стоить ' + jamaica + ' кредитов.'); 
         break;    
         
         default:

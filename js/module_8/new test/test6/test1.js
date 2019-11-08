@@ -9,65 +9,35 @@
   Добавьте классы и атрибуты.
 */
 
-class createMovieCard {
- 
-  createDiv(addList) {
-    const list = document.querySelector(addList);
-    const createUl = document.createElement("div");
-    createUl.classList.add("movie");
-    list.append(createUl);
-  }
+const createElement = (tag, ...className) => {
+
+  const createElement = document.createElement(tag);
   
-  createImg(addList) {
-      const list = document.querySelector(addList);
-      const createImg = document.createElement("img");
-      createImg.classList.add("movie__image");
-      createImg.setAttribute("src", "http://image.tmdb.org/t/p/w500/rPdtLWNsZmAtoZl9PK7S2wE3qiS.jpg");
-      createImg.setAttribute("alt", "movie image");
-      list.append(createImg);
-  }
+  createElement.classList.add(...className);
   
-  createTitle(addList) {
-      const list = document.querySelector(addList);
-      const createTitle = document.createElement("h2");
-      createTitle.classList.add("movie__title");
-      createTitle.textContent = "The Godfather";
-      list.append(createTitle);
-  }
+  return createElement;
+  
+  };  
 
-  createText(addList) {
-      const list = document.querySelector(addList);
-      const createText = document.createElement("p");
-      createText.classList.add("movie__description");
-      createText.textContent = 'Spanning the years 1945 to 1955, a chronicle of' 
-      'the fictional Italian-American Corleone crime family. When organized c'
-      'rime family patriarch, Vito Corleone barely survives' 
-      'an attempt on his life, his youngest son, Michael steps in to take care of the'
-      'would-be killers, launching a campaign of bloody revenge.';
-      list.append(createText);
-  }
+const createMovieCard = () => {
+  const createMovieDiv = createElement("div", "movie");  
+  const image = createElement('img', 'movie__image');
+  image.setAttribute('src', 'http://image.tmdb.org/t/p/w500/rPdtLWNsZmAtoZl9PK7S2wE3qiS.jpg');
+  image.setAttribute('alt', 'movie image');
+  const createMovieInnerDiv = createElement('div', 'movie__body');
+  const createTitle = createElement('h2', 'movie__body');
+  createTitle.textContent = 'The Godfather';
+  const createP1 = createElement('p', 'movie__description');
+  createP1.textContent = 'Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.';
+  const createP2 = createElement('p', 'movie__date');
+  createP2.textContent = 'Released: 1972-03-14';
+  const createP3 = createElement('p', 'movie__rating');
+  createP3.textContent = 'Rating: 8.6';
+  createMovieInnerDiv.append(createTitle, createP1, createP2, createP3);
+  createMovieDiv.append(image, createMovieInnerDiv)
 
-  createLink(addList) {
-    const list = document.querySelector(addList);
-    const createLink = document.createElement("p");
-    createLink.classList.add("movie__date");
-    createLink.textContent = "Released: 1972-03-14";    
-    list.append(createLink);
-}
+  return document.body.append(createMovieDiv);  
+};
 
-  createLink(addList) {
-    const list = document.querySelector(addList);
-    const createLink = document.createElement("p");
-    createLink.classList.add("movie__date");
-    createLink.textContent = "Released: 1972-03-14";    
-    list.append(createLink);
-}
-}
+createMovieCard();
 
-
-const newCard = new createMovieCard();
-  newCard.createDiv("body");
-  newCard.createImg("img");
-  newCard.createTitle("h2");
-  newCard.createText("p");
-  newCard.createLink("p");
